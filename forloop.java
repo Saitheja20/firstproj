@@ -1,10 +1,8 @@
-import java.util.Scanner;
+
 public class forloop{
   public static void main(String args[]){
-    int n,i,sum;
-    Scanner sc= new Scanner(System.in);
-    System.out.println("Enter which table you want to print");
-    n=sc.nextInt();
+    int n=20,i,sum;
+
     for(i=1;i<10;i++){
       sum=n*i;
       System.out.println(n+" * "+i+" = "+sum);
