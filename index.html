@@ -3,152 +3,125 @@
 	<head>
 		<title>Facebook</title>
         <style>
-            @media(max-width:700px){
-                body{
+           <style>
+            /* Global styles */
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                background-color: rgb(240,242,245);
+            }
+            a:link, a:visited {
+                color: blue;
+                text-decoration: none;
+            }
+            .h2 {
+                font-weight: 50px;
+                line-height: 28px;
+                font-size: 24px;
+            }
+            .h3 {
+                font-size: 12px;
+            }
 
-                    background-color: #fff;
-                    }
-                    .first{
-                        position: relative;
-                    float: left;
-                    margin-left: 150px;
-                    margin-top: 170px;
-                    }
-                    .second{
-                        position: relative;
-                    float: none;
-                    margin-left: 150px;
-                    margin-top: 170px;
-
-                    }
-
+            /* Desktop styles */
+            @media (min-width: 700px) {
+                .container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
                 }
-                div{
-
-                        width: auto;
-                        margin: 0 auto;
-                        border-radius: 0;
-                        padding: 1em;
-                        padding-top: ;
-
+                .table {
+                    width: 500px;
+                    height: 500px;
+                    border-radius: 8px;
+                    background-color: rgb(255,255,255);
                 }
-            a:link,a:visited{
-                    color: blue;
-                    text-decoration: none;
-
-            }
-            .body{
-                background-color:rgb(240,242,245 );
-
-            }
-            .username{
-                text-align: left;
-                padding: 3px 15px;
-                    width: 260px ;
+                .facebook {
+                    font-size: 60px;
+                    color: rgb(24,119,242);
+                }
+                .form {
+                    padding: 1em;
+                }
+                .input-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 1em;
+                }
+                .input-group label {
+                    margin-bottom: 0.5em;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .input-group input {
                     height: 30px;
-                    border: 0.1;
-                    border-radius: 6px;
                     border: 1px solid #dddfe2;
-                    margin-left: 5px;
-                    margin-right: 5px;
-                
-                
-            }
-            .password{
-                text-align: left;
-                padding: 1px 15px;
-                    width: 260px ;
-                    height: 30px;
-                    border: 0.1;
                     border-radius: 6px;
-                    border: 1px solid #dddfe2;
-                    margin-left: 5px;
-                    margin-right: 5px;
-                    
-
-            }
-            .login{
-                text-align: center;
-                cursor: pointer;
-                    width: 290px ;
+                    padding: 0.5em 1em;
+                }
+                .login {
+                    width: 290px;
                     height: 30px;
+                    font-size: 20px;
+                    line-height: 30px;
                     background-color: rgb(24,119,242);
-                    color: white;   
+                    color: white;
                     border: none;
                     border-radius: 6px;
-                     font-size: 20px;
-                    line-height: 30px;
-                    margin-left: 5px;
-                    margin-right: 5px;
-
-            }
-            .createNew{
-                font-family: inherit;
-                cursor: pointer;
-                width: 200px ;
-                    height: 30px;                  
+                    cursor: pointer;
+                }
+                .create-new {
+                    width: 200px;
+                    height: 30px;
+                    margin: 10px 50px;
                     background-color: rgb(66,183,42);
                     color: white;
-                    margin: 10px 50px 10px 50px;
                     border: none;
                     border-radius: 6px;
-
+                    cursor: pointer;
+                }
+                .forgotten {
+                    font-size: 12px;
+                    text-align: center;
+                    color: rgb(144,212,255);
+                    cursor: pointer;
+                }
+                .create-page {
+                    font-size: 12px;
+                    text-align: center;
+                    margin-top: 1em;
+                    font-weight: bold;
+                }
             }
-            .forgotten{
-                text-align: center;
-                cursor: pointer;
-                    color:rgb(144,212,255) ;
-                    font-family: Helvetica, Arial, sans-serif;
-                     font-size: 12px;
-                    
 
-            }
-            .table{
-                background-color:rgb(255,255,255);
-                width:"500px" ;
-                height: "500px";  
-                border-radius: 8px;
-            }
-            .h2{
-
-                
-                font-weight: 50px;
-            line-height: 28px;
-             width: auto;
-             font-family: Helvetica, Arial, sans-serif;
-
-            }
-            .h3{
-                text-align: center;
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 12px;
-                 
-                
-            }
-            .first{
-                position: relative;
-                    float: left;
-                    margin-left: 150px;
-                    margin-top: 170px;
-            }
-            .second{
-
-                position: relative;
-                float: right;
-                margin-right: 150px;
-                margin-top: 150px;
-
-            }
-            .facebook{
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 60px;
-                color:rgb(24,119,242)
-                
-
-
-            }
-            
-        
+            /* Mobile styles */
+            @media (max-width: 699px) {
+                .facebook {
+                    font-size: 40px;
+                    text-align: center;
+                }
+                .h2 {
+                    font-size: 20px;
+                }
+                .table {
+                    width: 90%;
+                    margin: 0 auto;
+                    border-radius: 8px;
+                    background-color: rgb(255,255,255);
+                    padding: 1em;
+                }
+                .input-group {
+                    margin-bottom: 1em;
+                }
+                .input-group input {
+                    height: 40px;
+                    font-size: 16px;
+                }
+                .login {
+                    width: 100%;
+                    height: 40px;
+                    font-size: 20px;
+                    line-height: 40px;
             </style>
 	    <link rel="stylesheet" href="style.css">
 	</head>
